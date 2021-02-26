@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'markdownify',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,42 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
     '/var/www/static/',
 ]
+
+MARKDOWNIFY_WHITELIST_TAGS = [
+'a',
+'abbr',
+'acronym',
+'b',
+'blockquote',
+'em',
+'i',
+'li',
+'ol',
+'p',
+'strong',
+'ul',
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'img',
+]
+
+MARKDOWNIFY_WHITELIST_ATTRS = [
+'href',
+'src',
+'alt',
+]
+
+MARKDOWNIFY_WHITELIST_STYLES = [
+'color',
+'font-weight',
+]
+
+MARKDOWNIFY_WHITELIST_PROTOCOLS = [
+'http',
+'https',
+]
+
+# MARKDOWNIFY_STRIP = False

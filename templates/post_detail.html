@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block content %}
     {% load static %}
+    {% load markdownify %}
 
     {% block header %} {% include 'header.html' %} {% endblock header %}
 
@@ -11,7 +12,7 @@
             <p class="text-muted"><img class = "detail_icon" src="{% static 'icons/account_circle-24px.svg' %}" alt="Avatar" >{{ post.author }} | <img class = "detail_icon" src="{% static 'icons/calendar_today-24px.svg' %}" alt="Avatar" >{{ post.created_on }}</p>
             <hr>
 
-            <p class="card-text ">{{ object.content | safe }}</p>
+            <p class="card-text ">{{ object.content | markdownify }}</p>
           </div>
     </div>
 
