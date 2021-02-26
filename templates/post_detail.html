@@ -1,16 +1,18 @@
 {% extends 'base.html' %} {% block content %}
+    {% load static %}
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 card mb-4  mt-3 left  top">
-      <div class="card-body">
-        <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
-        <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
-        <p class="card-text ">{{ object.content | safe }}</p>
-      </div>
+    {% block header %} {% include 'header.html' %} {% endblock header %}
+
+    <div class="container-fluid">
+        <div class="col-md-8 offset-md-2 maincontainer">
+            <h1 class="post_detail">
+                {% block title %} {{ object.title }} {% endblock title %}
+            </h1>
+            <p class="text-muted"><img class = "detail_icon" src="{% static 'icons/account_circle-24px.svg' %}" alt="Avatar" >{{ post.author }} | <img class = "detail_icon" src="{% static 'icons/calendar_today-24px.svg' %}" alt="Avatar" >{{ post.created_on }}</p>
+            <hr>
+
+            <p class="card-text ">{{ object.content | safe }}</p>
+          </div>
     </div>
-    {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
-  </div>
-</div>
 
 {% endblock content %}

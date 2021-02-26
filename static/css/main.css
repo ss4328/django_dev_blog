@@ -40,9 +40,16 @@ body {
     color: white;
     height: 650px;
     background-size: contain;
+    background-position: center;
+    text-align: center;
 }
 
 .black-button{
     background: #000000;
     color: #ffffff;
+}
+
+.avatar {
+    width: 30px;
+    border-radius: 50%;
 }
