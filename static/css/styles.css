@@ -10112,3 +10112,9 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
