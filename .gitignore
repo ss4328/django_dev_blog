@@ -23,6 +23,7 @@ media
 .idea/**/gradle.xml 
 .idea/**/libraries 
 *.iws /out/ 
+.idea/
 
 # Python # 
 *.py[cod] 
@@ -83,6 +84,7 @@ venv/
 ENV/ 
 env.bak/ 
 venv.bak/ 
+virtual/
 
 # mkdocs documentation 
 /site 
@@ -117,3 +119,4 @@ GitHub.sublime-settings
 /templates/portfolio.html
 
 virtual/
+.env
