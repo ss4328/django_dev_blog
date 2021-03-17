@@ -9,7 +9,12 @@ media
 # Backup files # 
 *.bak 
 
-# If you are using PyCharm # 
+#MACOS
+.DS_Store
+
+# If you are using PyCharm #
+.idea/
+.idea/*
 .idea/**/workspace.xml 
 .idea/**/tasks.xml 
 .idea/dictionaries 
@@ -22,8 +27,7 @@ media
 .idea/**/uiDesigner.xml 
 .idea/**/gradle.xml 
 .idea/**/libraries 
-*.iws /out/ 
-.idea/
+*.iws /out/
 
 # Python # 
 *.py[cod] 

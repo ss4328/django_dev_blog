@@ -187,8 +187,3 @@ django_heroku.settings(locals())
 options = DATABASES['default'].get('OPTIONS', {})
 options.pop('sslmode', None)
 
-
-
-#required reads
-#1. https://blog.usejournal.com/deploying-django-to-heroku-connecting-heroku-postgres-fcc960d290d1
-#2. https://devcenter.heroku.com/articles/django-app-configuration
