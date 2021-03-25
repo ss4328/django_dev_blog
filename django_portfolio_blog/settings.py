@@ -143,42 +143,55 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-MARKDOWNIFY_WHITELIST_TAGS = [
-'a',
-'abbr',
-'acronym',
-'b',
-'blockquote',
-'em',
-'i',
-'li',
-'ol',
-'p',
-'strong',
-'ul',
-    'h1',
-    'h2',
-    'h3',
-    'h4',
-    'h5',
-    'img',
-]
+MARKDOWNIFY = {
+    "default": {
+        "MARKDOWN_EXTENSIONS": [
+            'markdown.extensions.fenced_code',
+            'markdown.extensions.extra',
+            'markdown.extensions.codehilite',
+        ],
+        "WHITELIST_STYLES": [
+            'color',
+            'font-weight',
+        ],
+        "WHITELIST_TAGS": [
+            'code',
+            'pre',
+            'span',
+            'div',
+            'a',
+            'abbr',
+            'acronym',
+            'b',
+            'blockquote',
+            'em',
+            'i',
+            'li',
+            'ol',
+            'p',
+            'strong',
+            'ul',
+            'h1',
+            'h2',
+            'h3',
+            'h4',
+            'h5',
+            'img',
+        ],
+        "WHITELIST_ATTRS": [
+            'class',
+            'href',
+            'src',
+            'alt',
+            ],
+        "WHITELIST_PROTOCOL": [
+            'http',
+            'https',
+        ],
+        "BLEACH": False
+    }
+}
 
-MARKDOWNIFY_WHITELIST_ATTRS = [
-'href',
-'src',
-'alt',
-]
-
-MARKDOWNIFY_WHITELIST_STYLES = [
-'color',
-'font-weight',
-]
-
-MARKDOWNIFY_WHITELIST_PROTOCOLS = [
-'http',
-'https',
-]
 
 # MARKDOWNIFY_STRIP = False
 django_heroku.settings(locals())
